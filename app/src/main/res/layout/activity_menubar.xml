@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenubarActivity">
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <ImageView
+                android:id="@+id/ui_base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@mipmap/buttom_bar"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@id/ui_base"
+                app:layout_constraintTop_toTopOf="@id/ui_base"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@mipmap/menu_image_nomal"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@id/ui_base"
+                app:layout_constraintTop_toTopOf="@id/ui_base"
+                app:layout_constraintStart_toEndOf="@id/menu"
+                app:srcCompat="@mipmap/_search_image_nomal"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@id/ui_base"
+                app:layout_constraintTop_toTopOf="@id/ui_base"
+                app:layout_constraintStart_toEndOf="@id/search"
+                app:srcCompat="@mipmap/home_image_nomal"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/mypage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@id/ui_base"
+                app:layout_constraintTop_toTopOf="@id/ui_base"
+                app:layout_constraintStart_toEndOf="@id/home"
+                app:srcCompat="@mipmap/mypage_image_nomal"
+                android:contentDescription="@null" />
+
+            <!-- 결제 버튼 -->
+            <ImageView
+                android:id="@+id/paid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@id/ui_base"
+                app:layout_constraintTop_toTopOf="@id/ui_base"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@mipmap/paid_image_nomal"
+                android:contentDescription="@null" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 팝업 -->
+        <FrameLayout
+            android:id="@+id/popup_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#80000000"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/popup_container"
+                android:layout_width="380dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/popup_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/paid_popup"
+                    android:contentDescription="@null" />
+                <ImageView
+                    android:id="@+id/btn_card"
+                    android:layout_width="151dp"
+                    android:layout_height="151dp"
+                    android:src="@mipmap/button_card_off"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@null" />
+
+                <!-- QR결제 버튼 -->
+                <ImageView
+                    android:id="@+id/btn_qr"
+                    android:layout_width="151dp"
+                    android:layout_height="151dp"
+                    android:src="@mipmap/button_qr_off"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@null" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- 사이드바 -->
+    <FrameLayout
+        android:id="@+id/side_bar"
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <include layout="@layout/sidebar"/>
+    </FrameLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

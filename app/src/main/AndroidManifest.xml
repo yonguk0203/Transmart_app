@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Extest"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCW875dlfBG7WXrSK_wN1rx0gvbdBLrDDg" />
+
+        <activity
+            android:name=".LodingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" android:exported="true" />
+
+        <activity android:name=".MYpageActivity" android:exported="true" />
+
+        <activity android:name=".MapsActivity" android:exported="true" />
+
+        <activity android:name=".PointActivity" android:exported="true" />
+
+        <activity android:name=".CuponActivity" android:exported="true" />
+
+        <activity android:name=".PaidLogActivity" android:exported="true" />
+
+        <activity android:name=".PaidActivity" android:exported="true" />
+
+        <activity android:name=".FavoriteActivity" android:exported="true" />
+
+        <activity android:name=".NoticeActivity" android:exported="true" />
+
+        <activity android:name=".FAQ_Activity" android:exported="true" />
+
+        <activity android:name=".HelpActivity" android:exported="true" />
+
+        <activity android:name=".SettingActivity" android:exported="true" />
+
+        <activity android:name=".AlramActivity" android:exported="true" />
+
+        <activity android:name=".APP_OrderActivity" android:exported="true" />
+
+        <activity android:name=".Barcode_Activity" android:exported="true" />
+
+    </application>
+</manifest>

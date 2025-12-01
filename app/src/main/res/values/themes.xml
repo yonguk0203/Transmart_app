@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Extest" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 공통 테마 커스텀은 여기 -->
+    </style>
+
+    <!-- 앱에서 사용하는 실제 테마 -->
+    <style name="Theme.Extest" parent="Base.Theme.Extest">
+        <!-- 시스템 스플래시를 보이지 않게 -->
+        <item name="android:windowBackground">@drawable/loding_screern</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+</resources>
